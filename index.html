@@ -12,10 +12,9 @@
         <h1 id="header"> Airport Guide</h1>
         <h4 id="slogan">Travel smart, travel well.</h4>
       </div>
-    
       <div id="page2">
         <h3 id="middle">Current Gate</h3>
-        <select id="location1">
+        <select id="currentgateid">
           <option selected></option>
           <option id="gateA">Gate A</option>
           <option id="gateB">Gate B</option>
@@ -24,7 +23,7 @@
         </select>
 
         <h3 id="middle">Middle Point</h3>
-        <select id="location2">
+        <select id="middlepointid">
           <option selected></option>
           <option id="gateA">Gate A</option>
           <option id="gateB">Gate B</option>
@@ -33,7 +32,7 @@
         </select>
 
         <h3 id="middle">Target Gate</h3>
-        <select id="location3">
+        <select id="targetgateid">
           <option selected></option>
           <option id="gateA">Gate A</option>
           <option id="gateB">Gate B</option>
@@ -43,7 +42,7 @@
 
         <h3 id="text">Available Time (in minutes)</h3>  <input type="text" id="availabletime">
         </br>
-        <button onclick="calculatetime()" id="currentgatebutton">Calculate Time</button>
+        <button onclick="calculatetime()" id="calculatetimebutton">Calculate Time</button>
         </br>
         <div id="time">
           <label>Time Left </label>
