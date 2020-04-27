@@ -16,62 +16,38 @@ document.getElementById("page2").style = "display: none;"
 document.getElementById("page3").style = "display: block;"
 }
 
+let distances = {
+
+  "gateA" : 200,
+
+  "gateB" : 500,
+
+  "gateC" : 1500,
+
+  "dutyfree" : 700,
+}
+
 function calculatetime() {
 
   let v = 10
   
-  let gate_A = parseInt(document.getElementById("gateA").innerHTML)
+  let current_gate = document.getElementById("currentgateid");
 
-  let gate_B = parseInt(document.getElementById("gateB").innerHTML)
+  let middle_point = document.getElementById("middlepointid");
 
-  let gate_C = parseInt(document.getElementById("gateC").innerHTML)
+  let target_gate = document.getElementById("targetgateid");
 
-  let duty_free = parseInt(document.getElementById("dutyfree").innerHTML)
+  let currentgate = distances[current_gate];
 
-  let current_gate = parseFloat(document.getElementById("location1").value)
+  let middlepoint = distances[middle_point];
 
-  let middle_point = parseFloat(document.getElementById("location2").value)
-   
-  let target_gate = parseFloat(document.getElementById("location3").value)
-
-
-  if (current_gate == gate_A)
-      {GateA = 200}
-  if (current_gate == gate_B)
-      {GateB = 500}
-  if (current_gate == gate_C)
-      {GateC = 1500}
-  if (current_gate == duty_free)
-      {Dutyfree = 700}
-
-      
-  if (middle_point == gate_A)
-      {GateA = 200}
-  if (middle_point == gate_B)
-      {GateB = 500}
-  if (middle_point == gate_C)
-      {GateC = 1500}
-  if (middle_point == duty_free)
-      {Dutyfree = 700}
-
-      
-  if (target_gate == gate_A)
-      {GateA = 200}
-  if (target_gate == gate_B)
-      {GateB = 500}
-  if (target_gate == gate_C)
-      {GateC = 1500}
-  if (target_gate == duty_free)
-      {Dutyfree = 700}
-
-  let calculatetime = Math.abs(current_gate + middle_point - target_gate)/v
-  console.log (calculatetime);
-
+  let targetgate = distances[target_gate];
   
-  document.getElementById("tleft").innerHTML = calculatetime
-  
+  console.log(currentgate)
+  console.log(middlepoint)
+  console.log(targetgate)
+  console.log((Math.abs(currentgate + middlepoint - targetgate))/v) 
 }
-
 
 function showfloors() {
 
